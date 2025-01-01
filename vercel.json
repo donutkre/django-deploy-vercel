@@ -1,13 +1,13 @@
 {
     "builds": [{
-      "src": "test_project/wsgi.py",
+      "src": "wallet_api/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.3" }
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9.0" }
     }],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "test_project/wsgi.py"
+        "dest": "wallet_api/wsgi.py"
       }
     ]
 }
