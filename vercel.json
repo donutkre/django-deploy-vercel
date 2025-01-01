@@ -1,13 +1,15 @@
 {
-    "builds": [{
+  "builds": [
+    {
       "src": "wallet_api/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9.0" }
-    }],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "wallet_api/wsgi.py"
-      }
-    ]
+      "config": { "maxLambdaSize": "15mb" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "wallet_api/wsgi.py"
+    }
+  ]
 }
